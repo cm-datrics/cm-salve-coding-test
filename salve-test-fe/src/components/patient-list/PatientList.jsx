@@ -163,7 +163,7 @@ const PatientList = (props) => {
       {
         initialised
           ? (
-            <div className="mt-2 flex flex-col flex-1 overflow-y-scroll">
+            <div className="mt-2 flex flex-col flex-1 overflow-y-scroll overflow-x-hidden">
 
               <div className="-my-2 -mx-4 sm:-mx-6 lg:-mx-8 flex-1">
                 <div className="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">
