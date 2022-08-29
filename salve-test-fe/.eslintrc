@@ -1,0 +1,38 @@
+{
+  "root": true,
+  "extends": ["react-app", "airbnb"],
+  "plugins": ["better-styled-components", "prefer-arrow"],
+  "rules": {
+      "react/jsx-props-no-spreading": 0,
+      "react/forbid-prop-types": 0,
+      "react/prop-types": 1,
+      "react/no-unused-prop-types": 0,
+      "react/require-default-props": 1,
+      "react/jsx-no-bind": 0,
+      "react/function-component-definition": [2, { "namedComponents": "arrow-function" }],
+      "react/jsx-filename-extension": 0,
+      "react/button-has-type": 0,
+      "import/prefer-default-export": 0,
+      "no-case-declarations": 0,
+      "max-len": [0, { "code": 180 }],
+      "consistent-return": 0,
+      "no-unused-vars": 1,
+      "default-param-last": 0,
+      "no-shadow": 0,
+      "import/no-extraneous-dependencies": 0,
+      "react/jsx-no-useless-fragment": 0,
+      "react/no-unescaped-entities": 0,
+      "jsx-a11y/no-noninteractive-element-interactions": 1,
+      "jsx-a11y/click-events-have-key-events": 0,
+      "jsx-a11y/interactive-supports-focus": 0,
+      "jsx-a11y/label-has-associated-control": 0,
+      "no-unsafe-optional-chaining": 0,
+      "func-names": 0,
+      "no-console": 0,
+      "prefer-arrow-callback": 1
+  },
+  "env": {
+      "browser": true,
+      "node": true
+  }
+}
