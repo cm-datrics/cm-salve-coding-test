@@ -34,3 +34,10 @@ In order to run the app locally
 - Can sort by d.o.b ascending/descending and last name ascending/descending
 - the last name search is built with a hybrid value of last name - first name so if multiple patients had the same last name then the first names would be sorted within that group
 - also added a simple filter to search for patients by that hybrid value (can type in their first or last name to narrow down the results)
+
+### Screenshots
+<img width="775" alt="image" src="https://user-images.githubusercontent.com/70591489/187171841-2c6033d5-5cb3-4e20-970f-a1450e15bcb5.png">
+
+<img width="776" alt="image" src="https://user-images.githubusercontent.com/70591489/187171940-542e1dbb-3a43-4f5a-b4ab-0ff6d38c8cd3.png">
+
+
