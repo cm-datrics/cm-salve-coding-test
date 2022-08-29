@@ -54,7 +54,6 @@ const initialiseInMemoryDb = async () => {
   await initialisePatientData('./data/patients/patients-2.csv');
 }
 
-initialiseInMemoryDb()
 
 // Enable CORS for all methods
 app.use((req, res, next) => {
@@ -87,4 +86,7 @@ app.get('/clinics/:id', (req, res) => {
 });
 
 
-module.exports = app;
+module.exports = {
+  initialiseInMemoryDb,
+  app
+}

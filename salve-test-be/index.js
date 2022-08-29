@@ -4,8 +4,18 @@ config()
 
 console.log(process.env.PORT)
 
-const app = require('./app')
+const {app, initialiseInMemoryDb} = require('./app')
 
-app.listen(process.env.PORT ?? 3000, () => {
-  console.log(`Salve test backend started on ${process.env.PORT ?? 3000}`);
-});
+
+const initialise = async () => {
+
+  await initialiseInMemoryDb()
+
+  app.listen(process.env.PORT ?? 3000, () => {
+    console.log(`Salve test backend started on ${process.env.PORT ?? 3000}`);
+  });
+  
+}
+
+
+initialise()
