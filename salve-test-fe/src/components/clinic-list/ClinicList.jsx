@@ -11,7 +11,7 @@ const ClinicList = (props) => {
 
   return (
     <div className="max-w-screen-md mx-auto flex flex-col max-h-full overflow-y-hidden px-8" aria-label="Directory">
-      <div className="text-3xl mb-4 text-center"> Clinic List</div>
+      <div className="text-xl mb-4 text-center font-bold text-indigo-700 uppercase tracking-wider"> Clinic List</div>
       {loading
         ? (
           <div className="text-center">Loading Clinics</div>
