@@ -10,6 +10,8 @@ https://salve-test-fe.onrender.com
 
 (This frontend hits a backend URL of: https://salve-test-be.onrender.com/ )
 
+**NOTE:** If not accessed for a couple of hours, there might be a longer initial load time as the backend has to 'cold start'
+
 ### Running
 In order to run the app locally
 1. Clone the repository
