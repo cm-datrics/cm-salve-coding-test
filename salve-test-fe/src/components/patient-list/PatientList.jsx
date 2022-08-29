@@ -2,25 +2,11 @@
 import React, {
   useEffect, useState, useCallback, useMemo,
 } from 'react';
+import PropTypes from 'prop-types';
 
 /* This example requires Tailwind CSS v2.0+ */
 import { ChevronDownIcon, ChevronLeftIcon, ChevronUpIcon } from '@heroicons/react/20/solid';
 import { Link } from 'react-router-dom';
-
-const people = [
-  {
-    lastName: 'Abbot', firstName: 'Lindsey', email: 'lindsay.walton@example.com', role: 'Member',
-  },
-  {
-    lastName: 'Smith', firstName: 'Chris', email: 'lindsay.walton@example.com', role: 'Member',
-  },
-  {
-    lastName: 'Doe', firstName: 'John', email: 'lindsay.walton@example.com', role: 'Member',
-  },
-  {
-    lastName: 'Francis', firstName: 'Karen', email: 'lindsay.walton@example.com', role: 'Member',
-  },
-];
 
 const buildSortByDobFn = (ascModifier) => ({ dateOfBirth: dob1 }, { dateOfBirth: dob2 }) => {
   if (dob1 > dob2) {
@@ -47,7 +33,6 @@ const buildSortByLastNameFn = (ascModifier) => ({ lastNameFirstName: fullName1 }
 
 const PatientList = (props) => {
   const {
-    clinic = { name: 'Salve ' },
     patientListForClinic,
     fetchPatientsForClinic,
     clinicId,
@@ -245,6 +230,14 @@ const PatientList = (props) => {
 
     </div>
   );
+};
+
+PatientList.propTypes = {
+  patientListForClinic: PropTypes.array.isRequired,
+  fetchPatientsForClinic: PropTypes.func.isRequired,
+  clinicId: PropTypes.string.isRequired,
+  initialised: PropTypes.bool.isRequired,
+  clinicInfo: PropTypes.object.isRequired,
 };
 
 export default PatientList;

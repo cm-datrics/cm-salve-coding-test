@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import { fetchPatientsForClinic } from '../../store/reducers/clinics';
 import {
-  getClinicInfo, getClinicInfoList, getPatientListForClinic, getPatientsInitialisedForClinic,
+  getClinicInfo, getPatientListForClinic, getPatientsInitialisedForClinic,
 } from '../../store/selectors/clinics';
 import PatientList from './PatientList';
 
