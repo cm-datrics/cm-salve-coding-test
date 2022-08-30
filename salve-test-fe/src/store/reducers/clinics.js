@@ -33,6 +33,16 @@ export const fetchPatientsForClinic = createAsyncThunk(
   ,
 );
 
+const formatClinicsToObj = (clinicsList = []) => {
+  const clinicsMap = clinicsList.reduce((acc, current) => {
+    acc[current?.id] = current;
+
+    return acc;
+  }, {});
+
+  return clinicsMap;
+};
+
 export const clinicsSlice = createSlice({
   name: 'clinics',
   initialState,
@@ -45,7 +55,7 @@ export const clinicsSlice = createSlice({
       })
       .addCase(fetchClinics.fulfilled, (state, action) => {
         state.loading = false;
-        state.clinics = action.payload;
+        state.clinics = formatClinicsToObj(action.payload);
         state.initialised = true;
       })
       .addCase(fetchPatientsForClinic.fulfilled, (state, action) => ({
